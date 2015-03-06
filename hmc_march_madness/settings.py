@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from os.path import join
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -64,10 +65,17 @@ DATABASES = {
     }
 }
 
+TEMPLATE_DIRS = (
+    join(BASE_DIR, 'templates'),
+    )
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+    )
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'America/New_York'
 
 TIME_ZONE = 'UTC'
 
