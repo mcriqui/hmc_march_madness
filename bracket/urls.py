@@ -5,5 +5,5 @@ from bracket import views
 urlpatterns = patterns('',
 
 url(r'^admin/', include(admin.site.urls)),
-url(r'^$', views.get_template, name="get_template")
+url(r'^$', views.get_template, name="get_template"),
 )
