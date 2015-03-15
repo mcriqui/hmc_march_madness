@@ -1,0 +1,25 @@
+.jumbotron{
+    text-align: center;
+    font-family: 'Oswald';
+}
+
+.form{
+    text-align: center;
+    font-family: 'Roboto'
+}
+
+.pick{
+    text-align: center;
+    font-family: 'Roboto';
+    padding-top: 2em
+}
+
+.description{
+    padding-top: 5em;
+    text-align: center;
+}
+
+.basketball_picture{
+    text-align: center;
+    padding-top: 2em
+}

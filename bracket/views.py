@@ -51,7 +51,12 @@ def get_template(request):
             pick = team1
         elif team2_score > team1_score:
             pick = team2
+        elif team1_score == team1_score:
+            if team1.experience_ranking > team2.experience_ranking:
+                pick = team1
+            elif team2.experience_ranking > team1.experience_ranking:
+                pick = team2
         else:
-            pick = "It's a tie!"
+            pick = "Something went wrong- the pick is your choice."
     context = {'form': form, 'pick':pick}
     return render(request, 'home.html', context)
