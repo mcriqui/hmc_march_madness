@@ -11,6 +11,7 @@ class Ranking(models.Model):
     offensive_rebound_ranking = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     steals_ranking = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     away_games_ranking = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    strenghth_of_schedule = models.DecimalField(max_digits=4, decimal_places=2, null=True, blank=True)
 
     def __str__(self):
         return self.school_name
