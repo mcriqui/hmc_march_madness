@@ -18,10 +18,10 @@ def get_template(request):
         team2 = form.cleaned_data['second_team']
 
         # compares seed ranking
-        if team1.strength_of_schedule > team2.strength_of_schedule:
+        if team1.bracket_seed < team2.bracket_seed:
             team1_score = 1
             team2_score = 0
-        elif team2.strength_of_schedule > team1.strength_of_schedule:
+        elif team2.bracket_seed < team1.bracket_seed:
             team2_score = 1
             team1_score = 0
         else:
@@ -53,9 +53,9 @@ def get_template(request):
         elif team2_score > team1_score:
             pick = team2
         elif team1_score == team2_score:
-            if team1.bracket_seed < team2.bracket_seed:
+            if team1.away_games_ranking > team2.away_games_ranking:
                 pick = team1
-            elif team2.bracket_seed < team1.bracket_seed:
+            elif team2.away_games_ranking > team2.away_games_ranking:
                 pick = team2
             else:
                 pick = "Something went wrong- the pick is your choice."
